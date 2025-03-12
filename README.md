@@ -20,10 +20,14 @@ Once the server is running, open your browser and go to:
 http://127.0.0.1:5000/
 
 
-Features
+Features:
+
 Enter a city name to get the current weather (temperature, humidity, wind speed, and description).
+
 Option to view a 5-day weather forecast.
+
 An info button redirects to PM Accelerator.
 
-API Used
+API Used:
+
 OpenWeatherMap API for fetching weather data.
