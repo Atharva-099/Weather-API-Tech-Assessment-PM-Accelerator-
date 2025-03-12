@@ -21,7 +21,7 @@
             margin-top: 20px;
             position: relative;
         }
-        /* Popup styling: initially hidden */
+        
         .popup {
             margin-top: 20px;
             padding: 15px;
@@ -29,7 +29,7 @@
             background-color: #f9f9f9;
             display: none;
         }
-        /* Final Info button styling */
+      
         .final-info-button {
             margin-top: 20px;
             padding: 5px 10px;
@@ -78,7 +78,6 @@
                 </form>
             </div>
 
-            <!-- Info button placed after the forecast popup -->
             <button class="final-info-button" onclick="window.location.href='https://www.pmaccelerator.io/'">Info</button>
         {% endif %}
 
@@ -88,7 +87,7 @@
     </div>
     
     <script>
-        // Delay the display of the forecast popup by 3 seconds
+       
         window.onload = function() {
             setTimeout(function() {
                 var popup = document.getElementById("forecastPopup");
