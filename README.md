@@ -19,15 +19,18 @@ python app.py
 Once the server is running, open your browser and go to:
 http://127.0.0.1:5000/
 
+FEATURES:
 
-Features:
+Current Weather & Forecast:
+The app displays real-time weather information and, after a brief delay, offers the option to view a 5-day forecast.
 
-Enter a city name to get the current weather (temperature, humidity, wind speed, and description).
+CRUD Operations:
+The application includes additional UI routes to manage weather data records:
 
-Option to view a 5-day weather forecast.
+Create: Add new weather records with city name, a date range, and temperature.
 
-An info button redirects to PM Accelerator.
+Read: View all stored weather records.
 
-API Used:
+Update: Edit existing records.
 
-OpenWeatherMap API for fetching weather data.
+Delete: Remove records (with a confirmation prompt).
