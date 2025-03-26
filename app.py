@@ -65,14 +65,11 @@ from flask import Flask, render_template, request, redirect
 def info():
     return redirect("https://www.pmaccelerator.io/")
 
-# ---------------------------
-# SQLAlchemy Integration with MySQL
-# ---------------------------
+
 from flask_sqlalchemy import SQLAlchemy 
 from datetime import date
 
-# Configure MySQL database connection
-# Replace <username>, <password>, and <database_name> with your MySQL credentials and database
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Rickc137@127.0.0.1:3306/weather_app_db'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -90,13 +87,7 @@ class WeatherData(db.Model):
     def __repr__(self):
         return f'<WeatherData {self.city} {self.start_date} to {self.end_date}>'
 
-# ---------------------------
-# End of SQLAlchemy Integration
-# ---------------------------
 
-# ---------------------------
-# CRUD Endpoints for WeatherData (JSON API)
-# ---------------------------
 from flask import jsonify
 from datetime import datetime
 
@@ -185,12 +176,9 @@ def delete_weather_data(record_id):
     return jsonify({"message": "Weather data record deleted"}), 200
 
 # ---------------------------
-# End of CRUD Endpoints (JSON API)
+# End of CRUD Endpoints
 # ---------------------------
 
-# ---------------------------
-# UI Routes for CRUD Operations
-# ---------------------------
 
 from flask import redirect
 from datetime import datetime
@@ -268,9 +256,6 @@ def delete_weather_data_ui(record_id):
     <a href="/weather_data/list">Cancel</a>
     """
 
-# ---------------------------
-# End of UI Routes for CRUD Operations
-# ---------------------------
 
 if __name__ == "__main__":
     app.run(debug=True)
