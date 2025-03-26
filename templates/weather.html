@@ -44,6 +44,20 @@
         .final-info-button:hover {
             background-color: #0056b3;
         }
+        /* New styling for CRUD UI links */
+        .crud-links {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .crud-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        .crud-links a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -84,10 +98,15 @@
         {% if error %}
             <p style="color: red;">{{ error }}</p>
         {% endif %}
+
+        <!-- New CRUD UI links integrated into the main page -->
+        <div class="crud-links">
+            <a href="{{ url_for('list_weather_data_ui') }}">Manage Weather Data</a> |
+            <a href="{{ url_for('create_weather_data_ui') }}">Add New Record</a>
+        </div>
     </div>
     
     <script>
-       
         window.onload = function() {
             setTimeout(function() {
                 var popup = document.getElementById("forecastPopup");
